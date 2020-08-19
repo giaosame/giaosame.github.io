@@ -61,7 +61,7 @@ $darker-gray: mix(#000, $gray, 60%) !default;
 $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 
-$background-color: #fff !default;
+$background-color: #fafafa !default;
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
 $text-color: $dark-gray !default;
@@ -154,7 +154,7 @@ $max-width: $x-large !default;
 $right-sidebar-width-narrow: 150px !default;
 $right-sidebar-width: 250px !default;
 $right-sidebar-width-wide: 300px !default;
-$right-sidebar-width-myself: 10px;
+$right-sidebar-width-myself: 30px !default;
 
 /*
    Other
