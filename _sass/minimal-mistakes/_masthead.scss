@@ -1,6 +1,10 @@
 /* ==========================================================================
 MASTHEAD
 ========================================================================== */
+@font-face {
+  font-family: FuturaHeavyOblique;
+  src: url("../../assets/fonts/FuturaHeavyOblique.ttf");
+};
 
 .masthead {
   position: relative;
@@ -50,13 +54,8 @@ MASTHEAD
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-family: FuturaHeavyOblique;
-
-  @font-face {
-    font-family: FuturaHeavyOblique;
-    src: url("../../assets/fonts/FuturaHeavyOblique.ttf");
-  }
 }
 
 .site-subtitle {
@@ -91,6 +90,8 @@ MASTHEAD
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  font-family: FuturaLight;
+  font-size: 1.1em;
 
   &--lg {
     padding-right: 2em;
