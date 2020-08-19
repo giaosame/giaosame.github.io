@@ -15,7 +15,7 @@ MASTHEAD
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
+    padding: 5px 1em;
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -50,9 +50,8 @@ MASTHEAD
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: Futura;
-  font-style: italic;
 
   @font-face {
     font-family: Futura;
