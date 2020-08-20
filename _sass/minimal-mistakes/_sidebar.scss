@@ -18,7 +18,7 @@
 
   @include breakpoint($large) {
     float: left;
-    width: calc(#{$right-sidebar-width-narrow} - 1em);
+    width: calc(#{$right-sidebar-width-narrow} - 0.8em);
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
@@ -55,7 +55,7 @@
   }
 
   p {
-    font-family: FuturaMedium;
+    font-family: $times;
   }
 
   li {
@@ -169,7 +169,7 @@
   }
 }
 .sidebar .author__name {
-  font-family: FuturaMedium;
+  font-family: $times;
   font-size: $type-size-5;
 }
 
