@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Qiaosen Chen"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/avatar.jpg"
   bio              : "Master's candidate at the UPenn & Programmer & Quick Learner"
   location         : "Philadelphia, PA"
   links:

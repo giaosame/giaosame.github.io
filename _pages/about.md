@@ -6,5 +6,32 @@ layout: single
 author_profile: true
 ---
 
+I am Qiaosen (Johnson), a second year master's student from the University of Pennsylvania, passionate in programming and computer graphics, interested in developing VR/AR software and web applications.
 
-## J jump
+I have a wide range of hobbies, including collecting stamps, hitting the gym and watching movies.
+
+## Work Experience  
+![left-aligned-image](/assets/images/logos/tencent.png){: .align-left}
+**Tencent America** (Palo Alto, California, United States)  
+Media Engineer Intern  
+Jun 2020 - Present
+<hr>
+
+![left-aligned-image](/assets/images/logos/huawei.png){: .align-left}
+**Huawei** (Nanjing, Jiangsu, China)  
+Software Development Engineer Intern   
+Dec 2018 - May 2019
+<hr>
+
+## Education  
+![left-aligned-image](/assets/images/logos/penn.png){: .align-left}
+**University of Pennsylvania**    
+Master of Science in Engineering, Computer Graphics (Computer Science)  
+Aug 2019 - May 2021  
+<hr>
+
+![left-aligned-image](/assets/images/logos/seu.png){: .align-left}
+**Southeast University**  
+Bachelor of Engineering, Software Engineering  
+Sep 2015 - Jun 2019  
+<hr>
