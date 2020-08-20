@@ -6,7 +6,7 @@ layout: single
 author_profile: true
 ---
 
-I am Qiaosen (Johnson), a second year master's student from the University of Pennsylvania, passionate in programming and computer graphics, interested in developing VR/AR software and web applications.
+I am Qiaosen (Johnson), a second year master's student from the University of Pennsylvania, passionate in programming and computer graphics, interested in developing VR/AR software and building web applications.
 
 I have a wide range of hobbies, including collecting stamps, hitting the gym and watching movies.
 

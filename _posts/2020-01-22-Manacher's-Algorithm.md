@@ -1,3 +1,10 @@
+---
+title: "Manacher's Algorithm"
+date: 2020-01-22
+layout: single
+author_profile: false
+---
+
 [Manacher's Algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher.27s_algorithm) is an amazing algorithm to solve the problem of longest palindromic substring in $O(n)$ time. 	
 
 
@@ -16,13 +23,13 @@ Given a string $S$ with a size of $n$, the objective of Manacher's Algorithm is 
 
 #### 2.2 Preprocess
 
-Because a palindromic substring can have a center located at a single character or have a center located at a pair of characters,  there may have a problem of locating the center: at a specific index or between two indexes.
+Because a palindromic substring can have a center located at a single character or have a center located at a pair of characters, there may have a problem of locating the center: at a specific index or between two indexes.
 
-<img src="C:\Users\giaosame\Desktop\blogs\manacher_pic1.png" alt="Manacher's Pic 1" style="zoom:48%;" />
+![Manacher Pic1: how to locate the center of a string](/assets/images/blogs/manacher/manacher_pic1.png){: .align-center .zoom-50}
 
 To avoid this problem and for convenience, insert an arbitrary character, which doesn't appear in the string, like '#', in the beginning and end of $S$ and between every two characters of $S$,  so that to form a new string $S'$. Also, we can prepend and append another arbitrary character after inserting '#' (such as '\\$' and '@' in the following example), to avoid bounds checking, but these two characters, '\\$' and '@', will not be considered when running the algorithm.
 
-<img src="C:\Users\giaosame\Desktop\blogs\manacher_pic2.png" alt="Manacher_pic2" style="zoom:70%;" />
+![Manacher Pic2: Preprocess the pattern string](/assets/images/blogs/manacher/manacher_pic2.png){: .align-center .zoom-75}
 
 We can observe that, if the palindromic substring with a length $n_i$ in $S$, it has a corresponding palindromic substring with a length $2n_i + 1$ in $S'$. In general, every palindromic substring in the original string corresponds to a palindromic substring in the transformed string of the odd length.
 
@@ -30,7 +37,7 @@ We can observe that, if the palindromic substring with a length $n_i$ in $S$, it
 
 $p[i]$ represents the radius of the largest odd-length palindromic substring centered at index $i$.
 
-<img src="C:\Users\giaosame\Desktop\blogs\manacher_pic3.png" alt="Manacher_pic3" style="zoom:80%;" />
+![Manacher Pic3: Manacher table](/assets/images/blogs/manacher/manacher_pic3.png){: .align-center}
 
 #### 2.4 Variables Declaration
 
@@ -39,7 +46,7 @@ $p[i]$ represents the radius of the largest odd-length palindromic substring cen
 - $i$ : the position of a character in $S'$ whose palindromic span is being determined, and $i$ is alway to the right of $c$.
 - $Palind(j)$ : the palindromic substring centered at the position $j$.
 
-<img src="C:\Users\giaosame\Desktop\blogs\manacher_pic4.png" alt="img" style="zoom:66%;" />
+![Manacher Pic4: Variables Declaration](/assets/images/blogs/manacher/manacher_pic4.png){: .align-center .zoom-75}
 
 Let $i'$ be the mirrored position of $i$ with respect to the center $c$, and $i'$ and $i$ has such a relation:
 
@@ -51,23 +58,22 @@ Assume that $p[i']$ for all $i' < i$ has already been calculated, and then itera
 
 There are 3 cases when determining $p[i]$:
 
-- Case 1: $Palind(i')$ is totally within the range of $Palind(c)$, as shown below. According to the mirrored property of the palindrome, we can get that **p[i] = p[i']**. For example, $S$ = "abababa", $S'$ = "\\$#a#b#a#b#a#b#a#@", $c = 6$, $i = 8$.
+- Case 1: $Palind(i')$ is totally within the range of $Palind(c)$, as shown below. According to the mirrored property of the palindrome, we can get that **```p[i] = p[i']```**. For example, $S$ = "abababa", $S'$ = "\\$#a#b#a#b#a#b#a#@", $c = 6$, $i = 8$.
 
-<img src="C:\Users\giaosame\Desktop\blogs\manacher_pic5.png" alt="img" style="zoom:75%;" />
+![Manacher Pic5: hot to compute talbe p: case1](/assets/images/blogs/manacher/manacher_pic5.png){: .align-center .zoom-75}
 
 
+- Case 2: There exists a part of $Palind(i')$ outside $Palind(c)$,  i.e., $Palind(i')$ extends beyond the left boundary of $Palind(c)$. We can get that **```p[i] = r - i```**. For example, $S$ = "ecbceaecbcg", $S'$ = "\\$#e#c#b#c#e#a#e#c#b#c#g#@", $c = 12$, $i = 18$.
 
-- Case 2: There exists a part of $Palind(i')$ outside $Palind(c)$,  i.e., $Palind(i')$ extends beyond the left boundary of $Palind(c)$. We can get that **p[i] = r - i**. For example, $S$ = "ecbceaecbcg", $S'$ = "\\$#e#c#b#c#e#a#e#c#b#c#g#@", $c = 12$, $i = 18$.
-
-<img src="C:\Users\giaosame\Desktop\blogs\manacher_pic6.png" alt="img" style="zoom:70%;" />
+![Manacher Pic6: hot to compute talbe p: case2](/assets/images/blogs/manacher/manacher_pic6.png){: .align-center .zoom-75}
 
 It is impossible to make the value of $p[i]$ larger, i.e., to extend $Palind(i)$ beyond $r$. Assume that we add a short substring with the length $l$ to the beginning and end of $Palind(i')$ and $Palind(i)$, then the longest palindromic substring centered at $c$ should have a radius $p(c) + l$, which contradicts with the assumption.
 
-<img src="C:\Users\giaosame\Desktop\blogs\manacher_pic7.png" alt="img" style="zoom:70%;" />
+![Manacher Pic7: hot to compute talbe p: case2](/assets/images/blogs/manacher/manacher_pic7.png){: .align-center .zoom-75}
 
 - Case 3: The left boundary of $Palind(i')$ is the same as the left boundary of $Palind(c)$. At this time , according to results we got from Case 1 and Case 2, $p[i]$ may be equal to $p[i']$ or be equal to $r - i$. For example, $S$ = "cbceaecbceaec", $S'$ = "\\$#c#b#c#e#a#e#c#b#c#e#a#e#c#@", $c = 10$, $i = 16$. Besides, we are not sure whether we can continue to increase $p[i]$, so we just try to extend the right boundary of $Palind(i)$ while $S'[i - (p[i] + 1)]  == S'[i + (p[i] + 1)]$.
 
-<img src="C:\Users\giaosame\Desktop\blogs\manacher_pic8.png" alt="img" style="zoom:70%;" />
+![Manacher Pic8: hot to compute talbe p: case3](/assets/images/blogs/manacher/manacher_pic8.png){: .align-center .zoom-75}
 
 Update the center $c$ and the rightmost boundary $r$ during the above iteration when reaching a righter boundary index.
 
