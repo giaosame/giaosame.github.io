@@ -6,6 +6,12 @@ MASTHEAD
   src: url("/assets/fonts/FuturaHeavyOblique.ttf");
 };
 
+@font-face {
+  font-family: FuturaMedium;
+  src: url("/assets/fonts/FuturaMedium.woff"),
+       url('/assets/fonts/FuturaMedium.tff');
+};
+
 .masthead {
   position: relative;
   border-bottom: 1px solid $border-color;
@@ -89,8 +95,7 @@ MASTHEAD
 .masthead__menu-item {
   display: block;
   list-style-type: none;
-  white-space: nowrap;
-  font-family: $times;
+  font-family: FuturaMedium;
   font-size: 1.1em;
 
   &--lg {

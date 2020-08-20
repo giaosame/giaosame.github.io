@@ -54,9 +54,6 @@
     font-family: $sans-serif-narrow;
   }
 
-  p {
-    font-family: $times;
-  }
 
   li {
     font-family: $sans-serif;
@@ -169,7 +166,7 @@
   }
 }
 .sidebar .author__name {
-  font-family: $times;
+  font-family: FuturaHeavyOblique;
   font-size: $type-size-5;
 }
 
@@ -311,6 +308,7 @@
 
   li {
     white-space: nowrap;
+    font-family: FuturaMedium;
   }
 
   a {
