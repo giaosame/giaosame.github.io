@@ -2,7 +2,6 @@
 title: "C++ Notes: Lambda Expressions"
 date: 2020-06-06
 layout: single
-author_profile: false
 ---
 
 ### 1. Introducing Lambda

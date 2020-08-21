@@ -2,7 +2,6 @@
 title: "C++ Notes: Variables and Basic Types "
 date: 2020-03-30
 layout: single
-author_profile: false
 ---
 
 ### 1. Primitive Built-in Types

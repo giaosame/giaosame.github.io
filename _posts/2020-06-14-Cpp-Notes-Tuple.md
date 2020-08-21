@@ -2,7 +2,6 @@
 title: "C++ Notes: Tuple"
 date: 2020-06-14
 layout: single
-author_profile: false
 ---
 
 I have known $tuple$ of Python for a long time, but I just found that C++ also provides $tuple$.

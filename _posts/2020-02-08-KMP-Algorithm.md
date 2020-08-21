@@ -2,7 +2,6 @@
 title: "KMP Algorithm"
 date: 2020-02-28
 layout: single
-author_profile: false
 ---
 
 The [Knuth–Morris–Pratt (KMP) algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) is a string-searching algorithm. It can search for occurrences of a word within a main string by employing the observation that when a mismatch occurs, the word itself embodies sufficient information to determine where the next match could begin, thus bypassing re-examination of previously matched characters. The time complexity of KMP algorithm is $O(n)$ in the worst case.

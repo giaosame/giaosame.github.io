@@ -2,7 +2,6 @@
 title: "Binary Lifting"
 date: 2020-06-16
 layout: single
-author_profile: false
 ---
 
 Binary Lifting is a fabulous technique which can take $O(logn)$ time to find the **lowest common ancestor (LCA)** of two nodes in a tree, or to find the **k-th ancestor of any node** in a tree, based on a dynamic programming step to do some preprocessing. Besides, this technique can also be used to compute functions such as minimum, maximum and sum between two nodes of a tree in logarithmic time.

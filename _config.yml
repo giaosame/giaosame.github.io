@@ -266,6 +266,12 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
 
 # Defaults
 defaults:
@@ -275,10 +281,21 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
       show_date: true
       read_time: true
-      comments: # true
+      comments: true
+      share: true
+      related: true
+      mathjax: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      show_date: false
+      read_time: false
+      comments: true
       share: true
       related: true
       mathjax: true

@@ -2,7 +2,6 @@
 title: "Manacher's Algorithm"
 date: 2020-01-22
 layout: single
-author_profile: false
 ---
 
 [Manacher's Algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher.27s_algorithm) is an amazing algorithm to solve the problem of longest palindromic substring in $O(n)$ time. 	
