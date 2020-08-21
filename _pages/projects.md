@@ -14,7 +14,7 @@ project1:
     url: /projects/mini_maya
     excerpt: C++, OpenGL, GLSL, Qt
     btn_label: "More info"
-    btn_class: "btn--info"
+    btn_class: "btn--theme"
 
 project2:
   - image_path: /assets/images/projects/stampedia/stampedia.png  
@@ -23,7 +23,7 @@ project2:
     url: /projects/stampedia
     excerpt: Node.js, JavaScript, Bootstrap, MongoDB
     btn_label: "More info"
-    btn_class: "btn--info"
+    btn_class: "btn--theme"
 
 
 
