@@ -25,13 +25,13 @@ project2:
     btn_label: "More info"
     btn_class: "btn--theme"
 
-
-
-
 ---
 
 
 
 &nbsp;
+**Other projects is coming soon ...**
+{: .notice--warning}
+
 {% include feature_row id="project2" type="left" %}
 {% include feature_row id="project1" type="left" %}
