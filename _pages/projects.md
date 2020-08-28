@@ -7,7 +7,7 @@ collection: projects
 entries_layout: grid
 classes: wide
 
-project3:
+project4:
   - image_path: /assets/images/projects/stampedia/stampedia.png  
     alt: "Stampedia"
     title: "Stampedia: Node.js Based Web App"
@@ -16,7 +16,7 @@ project3:
     btn_label: "More info"
     btn_class: "btn--theme"
 
-project2:
+project3:
   - image_path: /assets/images/projects/mini_maya/mini_maya.png  
     alt: "Mini Maya"
     title: "Mini Maya: Qt Based Mesh Editor"
@@ -25,7 +25,7 @@ project2:
     btn_label: "More info"
     btn_class: "btn--theme"
 
-project1:
+project2:
   - image_path: /assets/images/projects/shader_player/shader_player.png  
     alt: "Shader PLAYer"
     title: "Shader PLAYer: Qt Based Shader Exhibition"
@@ -33,6 +33,16 @@ project1:
     excerpt: C++, OpenGL, GLSL, Qt
     btn_label: "More info"
     btn_class: "btn--theme"
+
+project1:
+  - image_path: /assets/images/projects/3d_modeling/darth_vader_helmet.jpg  
+    alt: "3D Computer Modeling"
+    title: "3D Computer Modeling"
+    url: /projects/3d_modeling
+    excerpt: Autodesk Maya
+    btn_label: "More info"
+    btn_class: "btn--theme"
+
 
 ---
 
@@ -42,6 +52,7 @@ project1:
 **Other projects is coming soon ...**
 {: .notice--warning}
 
+{% include feature_row id="project4" type="left" %}
 {% include feature_row id="project3" type="left" %}
 {% include feature_row id="project2" type="left" %}
 {% include feature_row id="project1" type="left" %}

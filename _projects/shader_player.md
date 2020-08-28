@@ -3,7 +3,7 @@ title: "Shader PLAYer"
 permalink: /projects/shader_player
 ---
 
-A Qt GUI based on OpenGL, with different vertex and fragment shaders written in GLSL to apply different coloration effects to the surfaces of 3D models, which can perform various post-processing effects on the scenes rendered by the surface shaders, with procedural noise functions added for some shaders to perform visual deformations and colorations.
+A Qt GUI based on OpenGL, with different vertex and fragment shaders written in GLSL to apply different coloration effects to the surfaces of 3D models. It also performs various post-processing effects on the scenes rendered by the surface shaders, with procedural noise functions added for some shaders to perform visual deformations and colorations.
 
 
 ## Features
