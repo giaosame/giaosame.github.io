@@ -20,11 +20,11 @@ This is a reading room modeled according to the one in the Li Wen Zheng Library 
 
 
 ### Character Modeling
-The rendering process:  
-![3D Computer Modeling Pic5: Character Rendering](/assets/images/projects/3d_modeling/character_rendering.png)  
-
 The helmet of Darth Vader:  
 ![3D Computer Modeling Pic6: Darth Vader Helmet](/assets/images/projects/3d_modeling/darth_vader_helmet.jpg)  
+
+The rendering process:  
+![3D Computer Modeling Pic5: Character Rendering](/assets/images/projects/3d_modeling/character_rendering.png)  
 
 The complete character modeling of Darth Vader:  
 ![3D Computer Modeling Pic7: Darth Vader](/assets/images/projects/3d_modeling/character.png)
