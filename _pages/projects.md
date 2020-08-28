@@ -49,7 +49,7 @@ project1:
 
 
 &nbsp;
-**Other projects is coming soon ...**
+**Other projects are coming soon ...**
 {: .notice--warning}
 
 {% include feature_row id="project4" type="left" %}
