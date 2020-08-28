@@ -4,7 +4,7 @@ date: 2020-03-30
 layout: single
 ---
 
-### 1. Primitive Built-in Types
+## 1. Primitive Built-in Types
 
 $$
 \text{primitive type} =
@@ -20,19 +20,19 @@ void
 \end{cases}
 $$
 
-#### 1.1 Character Types
+### 1.1 Character Types
 
 A ```char``` is guaranteed to be big enough to hold numeric values corresponding to the characters in the machine's basic character set. ```wchar_t```,  ```char16_t``` , ```char32_t``` are used for extended character sets. The ```wchar_t``` type, meaning "wide character" is guaranteed to be large enough to hold any character in the machine's largest extended character set. The types ```char16_t``` , ```char32_t``` are intended for Unicode characters.
 
-#### 1.2 Signed and Unsigned Characters
+### 1.2 Signed and Unsigned Characters
 
 There are three distinct basic character types: ```char```, ```signed char```, and ```unsigned char```. In particular, ```char``` is not the same type as ```signed char```, and actually there are only two representations: signed and unsigned. The plain ```char``` type uses one of these representations depending on the compiler.
 
-#### 1.3 Single-precision Floating-point VS Double-precision Floating-point
+### 1.3 Single-precision Floating-point VS Double-precision Floating-point
 
 Use ```double``` for floating-point computations; ```float``` usually does not have enough precision, and the cost of double-precision calculations versus single-precision is negligible. In fact, in some machines, double-precision operations are faster than single.
 
-#### 1.4 Signed and Unsigned Type Conversions
+### 1.4 Signed and Unsigned Type Conversions
 
 Signed values are automatically converted to unsigned, when expressions are mixed signed and unsigned values.
 
@@ -46,7 +46,7 @@ Signed values are automatically converted to unsigned, when expressions are mixe
 
 - If we assign an out-of-range value to an signed type object, the result is undefined. The program might appear to work, it might crash or produce garbage values.
 
-#### 1.5 Literals
+### 1.5 Literals
 
 - There are no literals of type ```short```.
 
@@ -59,20 +59,20 @@ Signed values are automatically converted to unsigned, when expressions are mixe
 
 
 
-### 2. Variables
+## 2. Variables
 
-#### 2.1 Variable VS Object
+### 2.1 Variable VS Object
 
 - Variable is a named storage with a certain type.
 - Object is a region of memory that has a type, it can be seen as a variable of class types.
 
-#### 2.2 Default Initialization
+### 2.2 Default Initialization
 
 The value of a built-in type object that is not explicitly initialized depends on where it is defined. Variables defined outside any function body are initialized zero.
 
 
 
-### 3. Compound Types
+## 3. Compound Types
 
 A compound type is a type that is defined in terms of another type, for example, references and pointers.
 
@@ -80,7 +80,7 @@ A compound type is a type that is defined in terms of another type, for example,
 - A pointer is a compound type that "points to" another type and hold the address of another object.
 - A pointer to reference is illegal in C++, because references are not objects, they don't have addresses.
 
-#### 3.1 Lvalue VS Rvalue
+### 3.1 Lvalue VS Rvalue
 
 Every expression is either an rvalue or an lvalue. An rvalue refers to an object's value (its content) while an lvalue refers to an object's identity (its location in memory).
 
@@ -90,7 +90,7 @@ Every expression is either an rvalue or an lvalue. An rvalue refers to an object
 - We can use an lvalue when an rvalue is required, but not vice versa.
 - Lvalues have persistent state, whereas rvalues are either literals or temporary object created in the course of evaluating expression.
 
-#### 3.2 Lvalue Reference VS Rvalue Reference
+### 3.2 Lvalue Reference VS Rvalue Reference
 
 Technically speaking, when using the term "reference", it means "lvalue reference". An rvalue reference is a reference that must be bound to an rvalue, and it can be obtained by using $\&\&$.
 
@@ -111,7 +111,7 @@ int&& rr2 = i * 3;      // ok
 
   We can bind  an rvalue to the above expressions, but we cannot directly bind an rvalue reference to an lvalue. Rvalue references refer to objects that are about to be destroyed, then new standard introduced it to support move operations.
 
-#### 3.3 Null Pointer
+### 3.3 Null Pointer
 
 A null pointer does not point to any object.
 
@@ -123,7 +123,7 @@ int *p3 = NULL;  // NULL is a preprocessor variable, which the cstdlib header de
 
 It is illegal to assign an ```int``` variable to a pointer, even if the variable's value happens to be 0.
 
-#### 3.4 ```void*``` Pointers
+### 3.4 ```void*``` Pointers
 
 The type ```void*``` is a special pointer type that can hold the address of any object.  
 
@@ -132,9 +132,9 @@ The type ```void*``` is a special pointer type that can hold the address of any 
 
 
 
-### 4. ```const``` Qualifier
+## 4. ```const``` Qualifier
 
-#### 4.1 References to ```const```
+### 4.1 References to ```const```
 
 A reference to ```const``` is a reference that refers to a ```const``` type, so it cannot be used to change the object to which the reference is bound.
 
@@ -146,7 +146,7 @@ A reference to ```const``` is a reference that refers to a ```const``` type, so 
   r2 = 0;                  // error
   ```
 
-#### 4.2 Pointers to ```const```
+### 4.2 Pointers to ```const```
 
 A pointer to ```const``` may not be used to change the object to which the pointer points. We may store the address of a ```const``` object only in a pointer to ```const```:
 
@@ -158,7 +158,7 @@ const int* cptr = &pi;   // ok
 int pj = 2; cptr = &pj;  // ok
 ```
 
-#### 4.3 ```const``` Pointers
+### 4.3 ```const``` Pointers
 
 - Like any other ```const``` object, a ```const``` pointer must be initialized, and once initialized, its value (i.e.,  the address that it holds) may not be changed.
 
@@ -171,7 +171,7 @@ int pj = 2; cptr = &pj;  // ok
   const int *const pip = &i;  // ok, pip is a const pointer to a const object.
   ```
 
-#### 4.4 ```constexpr``` and Constant Expressions
+### 4.4 ```constexpr``` and Constant Expressions
 
 A constant expression is an expression whose value cannot change and that can be evaluated at compile time. A literal is a constant expression. A ```const``` object that is initialized from a constant expression is also a constant expression.
 
@@ -189,13 +189,13 @@ constexpr int ci = i + 2;       // ok
 constexpr int sz = get_size();  // ok only if get_size() is a constexpr function
 ```
 
-#### 4.5 ```const``` VS ```constexpr```
+### 4.5 ```const``` VS ```constexpr```
 
 The primary difference between ```const``` and ```constexpr``` variables is that the initialization of a ```const``` variable can be deferred until run time. A ```constexpr``` variable must be initialized at compile time. All ```constexpr``` variables are ```const```.
 
 
 
-### 5. The ```decltype``` Type Specifier
+## 5. The ```decltype``` Type Specifier
 
 ```decltype``` returns the "declared type" of an expression. The compiler analyzes the expression to determine its type but does not evaluate the expression:
 
@@ -203,11 +203,11 @@ The primary difference between ```const``` and ```constexpr``` variables is that
 decltype(func()) sum = x;  // sum has whatever type func returns but does not call func.
 ```
 
-#### 5.1 When to use ```decltype```?
+### 5.1 When to use ```decltype```?
 
 Sometimes we want to define a variable with a type that the compiler deduces from an expression but do not want to use the expression to initialize the variable.
 
-#### 5.2 ```decltype``` and References
+### 5.2 ```decltype``` and References
 
 If an expression is an rvalue,  ```decltype(expression)``` is the type of the expression. If the expression is an lvalue,  ```decltype(expression)``` is an lvalue reference to the type of *expression*.
 
@@ -230,13 +230,13 @@ decltype(*p) c;   // error: c is int& and must be initialized
 decltype((i)) d;  // error: d is int& and must be initialized
 ```
 
-#### 5.3 ```decltype``` VS ```auto```
+### 5.3 ```decltype``` VS ```auto```
 
 ```decltype``` returns the exact type of an expression including top-level ```const``` and references, while we need to use  ```const auto``` or ```auto&``` to get what ```decltype``` does.
 
 
 
-### 6. Preprocessor and Preprocessor Variables
+## 6. Preprocessor and Preprocessor Variables
 
 The preprocessor is a program that runs before the compiler and changes the source text of our programs.
 
@@ -246,7 +246,7 @@ The preprocessor is a program that runs before the compiler and changes the sour
 
 
 
-### References
+## References
 
 - Stanley B. Lippman. *C++ Primer (5th Edition)*
 

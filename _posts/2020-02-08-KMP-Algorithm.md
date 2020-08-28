@@ -8,7 +8,7 @@ The [Knuth–Morris–Pratt (KMP) algorithm](https://en.wikipedia.org/wiki/Knuth
 
 
 
-### 1. The Naive String Matching Algorithm
+## 1. The Naive String Matching Algorithm
 
 The problem: given a pattern with the length $m$ and a text with the length $n$, both of them are strings, then determine whether the pattern appears somewhere in the text.
 
@@ -17,8 +17,8 @@ This brute-force algorithm takes time $O((n - m + 1)m)$, and this bound is tight
 ![KMP Pic1: worst cases of brute-force algorithm](/assets/images/blogs/kmp/kmp1.png){: .align-center .zoom-75}  
 
 
-### 2. Details of the Algorithm  
-#### 2.1 The Auxiliary Table $\pi$ for the Pattern
+## 2. Details of the Algorithm  
+### 2.1 The Auxiliary Table $\pi$ for the Pattern
 
 The table $\pi$ for a pattern encapsulates knowledge about how the pattern matches against shifts of itself: it tells us the the number of characters which can be skipped, so that we can take advantage of this information to avoid testing useless shifts in the naive string matching algorithm.
 
@@ -40,7 +40,7 @@ Given a text $T$ = "bacbababaabcbab" and a pattern $P$ = "ababaca", after compar
 ![KMP Pic4: the auxiliary table pi for the Pattern](/assets/images/blogs/kmp/kmp4.png){: .align-center .zoom-75}  
 
 
-#### 2.2 Preprocess the Pattern to Compute $\pi$
+### 2.2 Preprocess the Pattern to Compute $\pi$
 
 We can precompute the necessary information by comparing the pattern against itself. To do that, we declare the variable $len$ keep track of the length of the longest proper preﬁx which is also a proper sufﬁx. Note that $len$ not only represent the length of the successfully matched sub-pattern, it is also equal to the index of the character to be checked.
 
@@ -129,7 +129,7 @@ Taking the pattern $P$ = "ababaca" as an example: $\pi[0] = 0$, $len = 0$
 
   Because $P[7]$ = "a", $P[3]$ = "b", so $P[i] \ne P[len]$ at this time. Set $len = \pi[len - 1] = \pi[2] = 2$, and we can find that $P[2] = P[7]$  so that set $\pi[7]$ = ++$len = 3$. In other words, "aaa" is both the longest proper prefix and the longest proper suffix of $P[0...7]$ = "aaabaaaa".
 
-#### 2.3 How to Use $\pi$
+### 2.3 How to Use $\pi$
 
 We use the $\pi$ to decide the next characters to be matched. The idea is to not match a character that we know will anyway match.
 
@@ -156,9 +156,9 @@ Assume we are going to compare the $(i + 1)^{th}$ character $T[i]$ of the text a
 
 
 
-### 3. Application
+## 3. Application
 
-#### 3.1 [LeetCode] [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/)
+### 3.1 [LeetCode] [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/)
 
 Implement [strStr()](http://www.cplusplus.com/reference/cstring/strstr/). Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
@@ -222,7 +222,7 @@ public:
 
 
 
-#### 3.2 [LeetCode] [214. Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)
+### 3.2 [LeetCode] [214. Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)
 
 Given a string s, you are allowed to convert it to a palindrome by adding characters in front of it. Find and return the shortest palindrome you can find by performing this transformation.
 
@@ -264,7 +264,7 @@ public:
 
 
 
-### References
+## References
 
 - Thomas H. Cormen. *Introduction to Algorithms - 3rd Edition*
 

@@ -6,7 +6,7 @@ layout: single
 
 Binary Lifting is a fabulous technique which can take $O(logn)$ time to find the **lowest common ancestor (LCA)** of two nodes in a tree, or to find the **k-th ancestor of any node** in a tree, based on a dynamic programming step to do some preprocessing. Besides, this technique can also be used to compute functions such as minimum, maximum and sum between two nodes of a tree in logarithmic time.
 
-### 1. Preprocessing Using DP
+## 1. Preprocessing Using DP
 
 We will first precompute a memo $dp$ to record the ancestors of a give node, based on dynamic programming. Assume there are $n$ nodes in the tree, then $0 \le i < n$ and $0 \le j < \lceil log_2(n) \rceil$, given a array $parent$ which store the parent of each node, here is the the optimal substructure:  
 
@@ -25,9 +25,9 @@ The time complexity of the preprocessing is $O(nlogn)$.
 
 
 
-### 2. Application
+## 2. Application
 
-#### 2.1 [LeetCode] [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+### 2.1 [LeetCode] [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 
@@ -42,7 +42,7 @@ The specific steps of the solution based on Binary Lifting:
 
 
 
-#### 2.2 [LeetCode] [1483. Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node)
+### 2.2 [LeetCode] [1483. Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node)
 
 You are given a tree with n nodes numbered from $0$ to $n - 1$ in the form of a parent array where $parent[i]$ is the parent of node $i$. The root of the tree is node $0$. Implement a function to return the k-th ancestor of the given node. If there is no such ancestor, return -1.
 
@@ -92,7 +92,7 @@ public:
 
 
 
-### References
+## References
 
 - https://www.geeksforgeeks.org/lca-in-a-tree-using-binary-lifting-technique/
 

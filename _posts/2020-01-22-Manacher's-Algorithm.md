@@ -8,19 +8,19 @@ layout: single
 
 
 
-### 1. Longest Palindromic substring
+## 1. Longest Palindromic substring
 
 Before we get started, I should mention that there are another two easier approaches to solve [LeetCode] [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/), they are [dynamic programming](#41-Dynamic-Programming-Approach) approach and [expand around center](#42-Expand-Around-Center-Approach) approach, however, both of them take $O(n^2)$ time, so there is no doubt that Manacher's Algorithm is the optimized solution.
 
 
 
-### 2. Details of the Algorithm
+## 2. Details of the Algorithm
 
-#### 2.1 Algorithm's Objective
+### 2.1 Algorithm's Objective
 
 Given a string $S$ with a size of $n$, the objective of Manacher's Algorithm is to build a table $p$ such that knowing the value of $p[i]$ enables us to find the length of the longest palindromic substring with center at the position $i$.
 
-#### 2.2 Preprocess
+### 2.2 Preprocess
 
 Because a palindromic substring can have a center located at a single character or have a center located at a pair of characters, there may have a problem of locating the center: at a specific index or between two indexes.
 
@@ -32,13 +32,13 @@ To avoid this problem and for convenience, insert an arbitrary character, which 
 
 We can observe that, if the palindromic substring with a length $n_i$ in $S$, it has a corresponding palindromic substring with a length $2n_i + 1$ in $S'$. In general, every palindromic substring in the original string corresponds to a palindromic substring in the transformed string of the odd length.
 
-#### 2.3 Explanation for $p[i]$
+### 2.3 Explanation for $p[i]$
 
 $p[i]$ represents the radius of the largest odd-length palindromic substring centered at index $i$.
 
 ![Manacher Pic3: Manacher table](/assets/images/blogs/manacher/manacher_pic3.png){: .align-center}
 
-#### 2.4 Variables Declaration
+### 2.4 Variables Declaration
 
 - $c$ : the center of the currently known palindromic substring with a right boundary which is the closest to the end of the transformed string $S'$.
 - $r$ : the rightmost boundary of the palindromic substring centered at $c$. So current $c + r$ can return the max index among all the known palindromic substrings.
@@ -51,7 +51,7 @@ Let $i'$ be the mirrored position of $i$ with respect to the center $c$, and $i'
 
 $$i - c = c - i' \ \Leftrightarrow \ i' = 2c - i$$
 
-#### 2.5 How to Compute $p[i]$?
+### 2.5 How to Compute $p[i]$?
 
 Assume that $p[i']$ for all $i' < i$ has already been calculated, and then iterate $i$ from $1$ to $n - 2$ to determine the value of $p[i]$, where $n$ is the size of the transformed string $S'$, ignoring the beginning '\$' and the end '@'.
 
@@ -78,7 +78,7 @@ Update the center $c$ and the rightmost boundary $r$ during the above iteration 
 
 
 
-### 3. Implementation of the Algorithm
+## 3. Implementation of the Algorithm
 
 ``` c++
 string preprocess(string& s)
@@ -135,41 +135,9 @@ string longestPalindrome(string s)
 
 
 
-### 4. Other Approaches to Find the Longest Palindromic substring
+## 4. Other Approaches to Find the Longest Palindromic substring
 
-#### 4.1 Dynamic Programming
-
-``` c++
-string longestPalindrome(string s)
-{
-    string max_palind;
-    int n = s.size();
-    vector<vector<bool>> dp(n, vector<bool>(n));
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j <= i; j++)
-        {
-            if (s[j] == s[i] && (j + 1 >= i - 1 || dp[j + 1][i - 1]))
-            {
-                dp[j][i] = true;
-                if (max_palind.size() < i - j + 1)
-                {
-                    max_palind = s.substr(j, i - j + 1);
-                }
-            }
-        }
-    }
-
-    return max_palind;
-}
-```
-
-
-
-### 4. Other Approaches to Find the Longest Palindromic substring
-
-#### 4.1 Dynamic Programming
+### 4.1 Dynamic Programming
 
 ``` c++
 string longestPalindrome(string s)
@@ -197,7 +165,7 @@ string longestPalindrome(string s)
 }
 ```
 
-#### 4.2 Expand Around Center
+### 4.2 Expand Around Center
 
 ```c++
 int expandAroundCenter(const string& s, int left, int right)
@@ -232,7 +200,7 @@ string longestPalindrome(string s)
 
 
 
-### References
+## References
 
 - https://www.hackerrank.com/topics/manachers-algorithm
 

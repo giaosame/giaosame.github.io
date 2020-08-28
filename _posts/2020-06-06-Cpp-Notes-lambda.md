@@ -4,7 +4,7 @@ date: 2020-06-06
 layout: single
 ---
 
-### 1. Introducing Lambda
+## 1. Introducing Lambda
 
 A lambda expression represents a callable unit of code. It is a convenient way of defining an anonymous function object (a *closure*) right at the location where it is invoked or passed as an argument to a function.
 
@@ -19,7 +19,7 @@ auto lambda = [] {return 666;};
 cout << lambda() << endl;  // print 666
 ```
 
-#### 1.1 Callables
+### 1.1 Callables
 
 If $e$ is a callable expression, we can write $e (args) $ where args is a comma-separated list of zero or more arguments.
 
@@ -30,19 +30,19 @@ Examples of callables:
 - classes that overload the function-call operator:  ```int(1.f); ```
 - **lambda expressions**
 
-#### 1.2 Lambda VS Function
+### 1.2 Lambda VS Function
 
 - Like any function, a lambda can be called, has a return type, a parameter list and a function body.
 - Unlike a function, lambdas may be defined inside a function and they must use a trailing return to specify the return type.
 
 
 
-### 2. Capture List of a Lambda
+## 2. Capture List of a Lambda
 
 - A lambda may use a variable local to its surrounding function only if the lambda captures that variable in its capture list.
 - The capture list is used for local non$static$ variables only; lambdas can use local $static$s and variables declared outside the function directly.
 
-#### 2.1 Capture by Value
+### 2.1 Capture by Value
 
 Unlike parameters, the value of a captured variable is copied when the lambda is created, not when it is called.
 
@@ -56,7 +56,7 @@ void main()
 }
 ```
 
-#### 2.2 Capture by Reference
+### 2.2 Capture by Reference
 
 The $\&$ before the variable $v2$ in the capture list indicates $v2$ should be captured as a reference.
 
@@ -70,7 +70,7 @@ void main()
 }
 ```
 
-#### 2.3 Implicit Captures
+### 2.3 Implicit Captures
 
 Rather than explicitly listing the variables we want to use from the enclosing function, we can let the compiler infer which variables we use from the code in the lambda's body.
 
@@ -105,8 +105,7 @@ void main()
 ```
 
 
-
-### 3. Specifying the Lambda Return Type
+## 3. Specifying the Lambda Return Type
 
 We must use  a trailing return type to define a return type for a lambda.
 
@@ -114,7 +113,7 @@ If we omit the return type, the lambda has an inferred return type that depends 
 
 
 
-### 4. Lambdas are Function Objects
+## 4. Lambdas are Function Objects
 
 When we define a lambda, the compiler generates a unnamed class type that corresponds to that lambda. The classes generated from a lambda contain an overloaded function-call operator.
 
@@ -142,7 +141,7 @@ Classes generated from lambdas that capture variables by value have data members
 
 
 
-### References
+## References
 
 - Stanley B. Lippman. *C++ Primer (5th Edition)*
 
