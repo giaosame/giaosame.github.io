@@ -10,7 +10,7 @@ layout: single
 
 ## 1. Longest Palindromic substring
 
-Before we get started, I should mention that there are another two easier approaches to solve [LeetCode] [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/), they are [dynamic programming](#41-Dynamic-Programming-Approach) approach and [expand around center](#42-Expand-Around-Center-Approach) approach, however, both of them take $O(n^2)$ time, so there is no doubt that Manacher's Algorithm is the optimized solution.
+Before we get started, I should mention that there are another two easier approaches to solve [LeetCode] [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/), they are [dynamic programming](#41-dynamic-programming) approach and [expand around center](#42-expand-around-center) approach, however, both of them take $O(n^2)$ time, so there is no doubt that Manacher's Algorithm is the optimized solution.
 
 
 

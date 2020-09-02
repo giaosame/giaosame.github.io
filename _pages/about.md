@@ -1,10 +1,13 @@
 ---
 title: "About"
 permalink: /about/
-date: 2020-08-18
+date: 2020-09-01
 layout: single
 author_profile: true
 ---
+
+**I am actively seeking for a full-time Software Engineer position, feel free to contact me:)**
+{: .notice--success}
 
 I am Qiaosen (Johnson), a second year master's student from the University of Pennsylvania, passionate in programming and computer graphics, interested in developing VR/AR software and building web applications.
 
@@ -14,7 +17,7 @@ I have a wide range of hobbies, including collecting stamps, hitting the gym and
 ![left-aligned-image](/assets/images/logos/tencent.png){: .align-left}
 **Tencent America** (Palo Alto, California, United States)  
 Media Engineer Intern  
-Jun 2020 - Present
+Jun 2020 - Aug 2020
 <hr>
 
 ![left-aligned-image](/assets/images/logos/huawei.png){: .align-left}
