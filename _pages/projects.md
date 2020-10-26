@@ -7,8 +7,26 @@ collection: projects
 entries_layout: grid
 classes: wide
 
+project9:
+  - image_path: /assets/images/projects/cuda_path_tracer/cornell_kirby.png  
+    alt: "CUDA Path Tracer with Denoiser: GPU Based Renderer"
+    title: "CUDA Path Tracer with Denoiser: GPU Based Renderer"
+    url: /projects/cuda_path_tracer_with_denoiser
+    excerpt: C++, CUDA, OpenGL
+    btn_label: "More info"
+    btn_class: "btn--theme"
+
+project8:
+  - image_path: /assets/images/projects/vulkan_grass_rendering/grass_rendering.gif  
+    alt: "Vulkan Grass Rendering"
+    title: "Vulkan Based Grass Simulator and Renderer"
+    url: /projects/vulkan_grass_rendering
+    excerpt: C++, Vulkan, GLSL
+    btn_label: "More info"
+    btn_class: "btn--theme"
+
 project7:
-  - image_path: /assets/images/projects/air_painter/world.gif  
+  - image_path: /assets/images/projects/air_painter/AirPainter.gif
     alt: "Air Painter"
     title: "Air Painter"
     url: /projects/air_painter
@@ -88,6 +106,8 @@ project0:
 <!-- **Other projects are coming soon ...** -->
 <!-- {: .notice--warning} -->
 
+{% include feature_row id="project9" type="left" %}
+{% include feature_row id="project8" type="left" %}
 {% include feature_row id="project7" type="left" %}
 {% include feature_row id="project6" type="left" %}
 {% include feature_row id="project5" type="left" %}

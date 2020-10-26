@@ -6,10 +6,10 @@ layout: single
 author_profile: true
 ---
 
-**I am actively seeking for a full-time Software Engineer position, feel free to contact me:)**
+**I am actively seeking for a full-time Software Engineer position, feel free to contact me:) <br> [CV](/assets/Qiaosen_Chen_Resume.pdf)**
 {: .notice--success}
 
-I am Qiaosen (Johnson), a second year master's student from the University of Pennsylvania, passionate in programming and computer graphics, interested in developing VR/AR software and building web applications.
+I am Qiaosen (Johnson), a second year master's student from the University of Pennsylvania, passionate in programming, computer graphics and rendering, interested in developing VR/AR software and building web applications.
 
 I have a wide range of hobbies, including collecting stamps, hitting the gym and watching movies.
 
