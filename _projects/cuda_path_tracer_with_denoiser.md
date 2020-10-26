@@ -36,6 +36,8 @@ The path tracer uses CUDA to render image parallelly, based on Monte Carlo path 
     <a href="/assets/images/projects/cuda_path_tracer/mjolnir.png"><img src="/assets/images/projects/cuda_path_tracer/mjolnir.png"></a>
     <a href="/assets/images/projects/cuda_path_tracer/basketball.png"><img src="/assets/images/projects/cuda_path_tracer/basketball.png"></a>
 </figure>
+- Image with Denoiser
+![Denoiser pic](/assets/images/projects/cuda_path_tracer/denoised_result.png)
 
 ## References
 - Matt Pharr, Wenzel Jakob, and Greg Humphreys. *[Physically Based Rendering: From Theory To Implementation](http://www.pbr-book.org/)*
