@@ -44,20 +44,20 @@ project7:
     btn_class: "btn--theme"
 
 project6:
-  - image_path: /assets/images/projects/boid_simulation/boid_simulation.gif  
-    alt: "Boid Simulation"
-    title: "Boid Simulation"
-    url: /projects/boid_simulation
-    excerpt: CUDA, C++, Visual Studio
-    btn_label: "More info"
-    btn_class: "btn--theme"
-
-project5:
   - image_path: /assets/images/projects/stampedia/stampedia.png  
     alt: "Stampedia"
     title: "Stampedia: Node.js Based Web App"
     url: /projects/stampedia
     excerpt: Node.js, JavaScript, Bootstrap, MongoDB
+    btn_label: "More info"
+    btn_class: "btn--theme"
+
+project5:
+  - image_path: /assets/images/projects/boid_simulation/boid_simulation.gif  
+    alt: "Boid Simulation"
+    title: "Boid Simulation"
+    url: /projects/boid_simulation
+    excerpt: CUDA, C++, Visual Studio
     btn_label: "More info"
     btn_class: "btn--theme"
 
