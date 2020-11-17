@@ -115,6 +115,7 @@ project0:
 <!-- **Other projects are coming soon ...** -->
 <!-- {: .notice--warning} -->
 
+{% include feature_row id="project10" type="left" %}
 {% include feature_row id="project9" type="left" %}
 {% include feature_row id="project8" type="left" %}
 {% include feature_row id="project7" type="left" %}
