@@ -7,6 +7,15 @@ collection: projects
 entries_layout: grid
 classes: wide
 
+project10:
+  - image_path: /assets/images/projects/webgl_forwardplus_and_clustered_deferred_shading/webgl_shading.gif  
+    alt: "WebGL Forward+ and Clustered Deferred Shading"
+    title: "WebGL Forward+ and Clustered Deferred Shading"
+    url: /projects/webgl_forwardplus_and_clustered_deferred_shading
+    excerpt: WebGL, JavaScript, Node.js, GLSL
+    btn_label: "More info"
+    btn_class: "btn--theme"
+
 project9:
   - image_path: /assets/images/projects/cuda_path_tracer/cornell_kirby.png  
     alt: "CUDA Path Tracer with Denoiser: GPU Based Renderer"
