@@ -118,7 +118,7 @@ project0:
 {% include feature_row id="project10" type="left" %}
 {% include feature_row id="project9" type="left" %}
 <!-- {% include feature_row id="project8" type="left" %} -->
-{% include feature_row id="project7" type="left" %} -->
+{% include feature_row id="project7" type="left" %}
 {% include feature_row id="project6" type="left" %}
 <!-- {% include feature_row id="project5" type="left" %} -->
 {% include feature_row id="project4" type="left" %}
