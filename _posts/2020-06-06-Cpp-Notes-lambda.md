@@ -137,7 +137,7 @@ sort(words.begin(), words.end(), Compare());
 
 **Classes representing lambdas with captures**
 
-Classes generated from lambdas that capture variables by value have data members corresponding to each such variable. These classes also have a constructor to initialize these data members fro the value of the captured variables.
+Classes generated from lambdas that capture variables by value have data members corresponding to each such variable. These classes also have a constructor to initialize these data members from the value of the captured variables.
 
 
 
