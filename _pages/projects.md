@@ -15,6 +15,9 @@ project10:
     excerpt: WebGL, JavaScript, Node.js, GLSL
     btn_label: "More info"
     btn_class: "btn--theme"
+    url2: https://github.com/giaosame/Project5-WebGL-Forward-Plus-and-Clustered-Deferred
+    btn_label2: "Code"
+    btn_class2: "btn--success"
 
 project9:
   - image_path: /assets/images/projects/cuda_path_tracer/cornell_kirby.png  
@@ -24,6 +27,9 @@ project9:
     excerpt: C++, CUDA, OpenGL
     btn_label: "More info"
     btn_class: "btn--theme"
+    url2: https://github.com/giaosame/Project3-CUDA-Path-Tracer/tree/followup
+    btn_label2: "Code"
+    btn_class2: "btn--success"
 
 project8:
   - image_path: /assets/images/projects/vulkan_grass_rendering/grass_rendering.gif  
@@ -33,6 +39,9 @@ project8:
     excerpt: C++, Vulkan, GLSL
     btn_label: "More info"
     btn_class: "btn--theme"
+    url2: https://github.com/giaosame/Vulkan-Grass-Rendering
+    btn_label2: "Code"
+    btn_class2: "btn--success"
 
 project7:
   - image_path: /assets/images/projects/air_painter/AirPainter.gif
@@ -105,6 +114,9 @@ project0:
    excerpt: C#, Unity
    btn_label: "More info"
    btn_class: "btn--theme"
+   url2: https://github.com/giaosame/Space-Invaders
+   btn_label2: "Code"
+   btn_class2: "btn--success"
 
 
 ---
